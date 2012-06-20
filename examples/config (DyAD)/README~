@@ -1,0 +1,11 @@
+To use DyAD routing algorithm an additional parameter SETTLE_NUM is to be set. It defines the number of clock cycles for which the routing has to stay in adaptive mode as soon as congestion is detected.
+
+
+example
+
+RT_ALGO DYAD
+SETTLE_NUM 7
+
+
+As soon as congestion is detected, 7 Clock cycles from there it will stay in adaptive mode and then switch back to deterministic mode. It gives user the advantage of experimenting with different settle time in order to find the optimal settle time for a given topology and traffic.
+

@@ -1,0 +1,19 @@
+To create a multimedia traffic following are the parameters to be set
+
+HURST_PAR   // desired hurst parameter of the trace
+MIN  	   // min frame length of the trace
+MAX 	   // max frame legth of the trace
+DESTINATION RANDOM or FIXED <dest tile id>  // destination
+AVG_OFFTIME <value>  // value of average inter packet interval
+FLIT_INTERVAL <value> // value of inter flit interval
+HOTSPOT <dest tile id> <probability> // if DESTINATION RANDOM is given this can be used to create a hotspot node
+
+
+A sample example is given below
+
+HURST_PAR 0.81
+MIN 26
+MAX 126 
+DESTINATION FIXED 10
+AVG_OFFTIME 4
+FLIT_INTERVAL 2

@@ -1,0 +1,45 @@
+For applying any traffic pattern, make the changes as described below:
+
+
+For TRANSPOSE for tile-i,
+
+	type DESTINATION TRANSPOSE in nirgam/config/traffic/tile-i
+
+For BIT_REVERSAL
+
+	type DESTINATION BIT_REVERSAL in nirgam/config/traffic/tile-i
+
+For BIT_SHUFFLE for tile-i,
+
+	type DESTINATION BIT_SHUFFLE in nirgam/config/traffic/tile-i
+
+For BUTTERFLY for tile-i,
+
+	type DESTINATION BUTTERFLY in nirgam/config/traffic/tile-i
+
+For HOTSPOT for tile-i,
+	
+	type DESTNATION RANDOM
+	type HOTSPOT <Destination tile ID> <Probability> in nirgam/config/traffic/tile-i 
+
+example:
+
+tile-1
+DESTINATION TRANSPOSE
+
+then destination will be choosen as: 5
+
+tile-8
+DESTINATION BIT_REVERSAL
+
+then destination will be choosen as: 2
+
+tile-12
+DESTINATION BIT_SHUFFLE
+
+then destination will be choosen as:24
+
+tile-7
+DESTINATION BUTTERFLY
+
+the destination will be choosen as: 22 

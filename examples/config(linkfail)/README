@@ -1,0 +1,22 @@
+1) To fail a link:
+
+	In nirgam.config type "LINKFAIL" without the quotes followed by no. of links to be failed and specification of every link that needs to be failed.
+
+2) EXAMPLE: for a 5x5 mesh topology
+
+	LINKFAIL 2 0 1 1 6
+
+	The above statement tells that a total of 2 links have to be failed and they are the links between 0 ,1 and 1, 6.
+	
+	NOTE: 
+	
+	LINKFAIL 2 1 0 6 1  will not work because link specification is done in the following order: "west, east" and "north, south". 
+	In the actual topology node 1 is to the east of node 0 and node 1 is to the north of node 6.
+	so, west here is node 0 and east is node 1 similarly north is node 1 and south is node 6.
+
+	They have to be specified only in this order:
+	LINKFAIL 2 0 1 1 6    
+	or
+	LINKFAIL 2 1 6 0 1 
+	
+	To use the partially fault tolerant routing, give RT_ALGO FTXY

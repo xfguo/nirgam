@@ -1,0 +1,10 @@
+1) To reserve bandwidth
+
+	In nirgam.config type "BW_GT" followed by bandwidth to be reserved.
+
+2) EXAMPLE: for a 5x5 mesh topology with 4 virtual channels
+
+	BW_GT 0.75
+	
+	This means that the GT traffic (Bursty in implementation) can reserve 75% of the available virtual channels i.e. 3 out of 4 virtual channels will be reserved for GT traffic.
+
